@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## This Wherher-app is an effect of polishing programming skills using Next.js framework.
 
 ## Getting Started
 

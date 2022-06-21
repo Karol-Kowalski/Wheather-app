@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next -p 3000",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3000",
     "lint": "next lint"
   },
+  "author": "Karol Kowalski - Virion",
+  "license": "MIT",
   "dependencies": {
     "next": "12.1.6",
     "react": "18.2.0",
