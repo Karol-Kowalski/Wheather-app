@@ -5,13 +5,17 @@ export default function Page() {
   
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
-      console.log(position)
+      setCoords({
+        latitude: position.coords.latitude,
+        longitude: position.coords.longitude
+      })
     })
   },[])
 
   return (
     <div>
-      Hello
+      <p>{coords?.latitude}</p>
+      <p>{coords?.longitude}</p>
     </div>
   )
 }
