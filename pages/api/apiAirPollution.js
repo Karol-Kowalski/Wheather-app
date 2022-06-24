@@ -26,5 +26,6 @@ const airPollution = {
 }
 
 export default function apiAirPollution(req, res) {
-  res.status(200).json({ ...airPollution })
+  const data = airPollution.list[0].components
+  res.status(200).json({ ...data })
 }
