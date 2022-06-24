@@ -1,7 +1,11 @@
+import AirQuality from "../components/AirQuality";
+import GeolocationProvider from "../components/GeolocationProvider";
+
 export default function Page() {
+
   return (
-    <div>
-      Hello
-    </div>
+    <GeolocationProvider>
+      <AirQuality />
+    </GeolocationProvider>
   )
 }
