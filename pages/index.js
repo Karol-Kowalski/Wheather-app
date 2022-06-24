@@ -1,8 +1,11 @@
-import Geolocation from "../components/Geolocation";
+import AirQuality from "../components/AirQuality";
+import GeolocationProvider from "../components/GeolocationProvider";
 
 export default function Page() {
 
   return (
-    <Geolocation />
+    <GeolocationProvider>
+      <AirQuality />
+    </GeolocationProvider>
   )
 }
