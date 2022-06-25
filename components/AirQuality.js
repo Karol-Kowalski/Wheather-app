@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useCoords } from "./GeolocationProvider"
-
+import AirChart from "./AirChart";
 
 export default function AirQuality() {
   const coords = useCoords();
@@ -16,11 +16,13 @@ export default function AirQuality() {
     getData()
   }, [coords])
 
-  console.log(pollution);
+  console.log(pollution)
   return (
     <div>
-      <p>{coords?.latitude}</p>
-      <p>{coords?.longitude}</p>
+      {pollution ?
+        Object.keys(pollution)
+          .map(key => <AirChart key={key} name={key} value={pollution[key]} />) :
+        null}
     </div>
   )
 }
