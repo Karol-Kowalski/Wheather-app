@@ -7,9 +7,11 @@ export default function AirQuality() {
   const [pollution, setPollution] = useState();
   
   async function getData() {
-    const res = await fetch('http://localhost:3000/api/apiAirPollution');
-    const data = await res.json()
-    setPollution(data)  
+    const lat = coords.latitude;
+    const lon = coords.longitude;   
+    const res = await fetch(`http://localhost:3000/api/apiAirPollution?lat=${lat}&lon=${lon}`);
+    const data = await res.json();
+    setPollution(data);
   };
 
   useEffect(() => {
