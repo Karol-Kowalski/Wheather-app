@@ -15,8 +15,8 @@ export default function AirQuality() {
   };
 
   useEffect(() => {
-    getData()
-  }, [coords])
+    if (coords) getData();
+  }, [coords]);
 
   console.log(pollution)
   return (
