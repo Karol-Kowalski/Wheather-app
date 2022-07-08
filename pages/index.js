@@ -1,13 +1,12 @@
-import AirQuality from "../components/AirQuality";
-import GeolocationProvider from "../components/GeolocationProvider";
-import Weather from "../components/Weather";
+import AirQuality from "../components/AirQuality"
+import Weather from "../components/Weather"
 
-export default function Page() {
+export default function index() {
 
   return (
-    <GeolocationProvider>
-      <AirQuality />
+    <div>
       <Weather />
-    </GeolocationProvider>
+      <AirQuality />
+    </div>
   )
 }
