@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-const AirPollution = {
+const airPollution = {
   "coord":[
     50,
     50
@@ -25,6 +25,15 @@ const AirPollution = {
   ]
 }
 
-export default function handler(req, res) {
-  res.status(200).json({ name: 'John Doe' })
+const apiKey = process.env.PRIVATE_OPEN_WHEATHER_KEY;
+
+export default async function apiAirPollution(req, res) {
+  const { lat, lon } = req.query;
+
+  const url = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${apiKey}`
+  
+  const apiResponse = await fetch(url);
+  const airPollution = await apiResponse.json();
+  const data = await airPollution.list[0].components;
+  res.status(200).json({ ...data });
 }
