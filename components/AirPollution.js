@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useCoords } from "./GeolocationProvider"
 import AirChart from "./AirChart";
 
-export default function AirQuality() {
+export default function AirPollution() {
   const coords = useCoords();
   const [pollution, setPollution] = useState();
   

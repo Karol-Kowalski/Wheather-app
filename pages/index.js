@@ -1,4 +1,4 @@
-import AirQuality from "../components/AirQuality"
+import AirPollution from "../components/AirPollution"
 import Weather from "../components/Weather"
 
 export default function index() {
@@ -6,7 +6,7 @@ export default function index() {
   return (
     <div>
       <Weather />
-      <AirQuality />
+      <AirPollution />
     </div>
   )
 }
